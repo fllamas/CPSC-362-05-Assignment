@@ -1,7 +1,9 @@
 '''Back of House.'''
 
-# inventory for now
-inventory = {
+import json
+
+# inventory used for initial setup
+'''inventory = {
         'pork': 150,
         'chicken': 250,
         'shrimp': 100,
@@ -11,11 +13,25 @@ inventory = {
         'kimchi': 400,
         'atchara': 400,
         'egg': 200,
-        }
+        }'''
+
+# Load the inventory. If the file is missing, uncomment to create file and dump
+# contents.
+filename = 'inventory.json'
+try:
+    with open(filename) as f:
+        inventory = json.load(f)
+except FileNotFoundError:
+    print(f"Sorry, the file {filename} does not exist.")
+    # for initial setup
+    '''with open(filename, 'w') as f:
+        json.dump(inventory, f)'''
+else:
+    # read inventory successfully
+    pass
 
 def make_order(inventory):
     """Make an order and check the inventory."""
-
     protein = input("Step One: Pork, Chicken, Shrimp\n\tOption: ")
     protein = protein.lower()
     if protein in inventory.keys():

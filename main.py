@@ -1,7 +1,8 @@
 '''Main program.'''
 
-from foh import * 
+from foh import *
 from boh import *
+from accounting import *
 
 print(f"Before ordering: {inventory}\n")
 order = make_order(inventory)
