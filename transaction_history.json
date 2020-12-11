@@ -1,0 +1,11 @@
+{
+    "Table": "table_1",
+    "Chk": "#0001",
+    "Total amount": "$10.00",
+    "Order": "{'protein': 'pork', 'side': 'rice', 'pickle': 'kimchi', 'add_ons': 'egg'}"
+}{
+    "Table": "table_2",
+    "Chk": "#0002",
+    "Total amount": "$9.00",
+    "Order": "{'protein': 'chicken', 'side': 'salad', 'pickle': 'atchara', 'add_ons': 'none'}"
+}
