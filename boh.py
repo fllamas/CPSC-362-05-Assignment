@@ -1,6 +1,8 @@
 '''Back of House.'''
 
 import json
+#python3 -m pip install --user multimethod
+from multimethod import multimethod #install from above command
 
 # inventory used for initial setup
 '''inventory = {
@@ -68,7 +70,8 @@ def display_menu(inventory):
         print(f"{add_ons.title():>8}", end=" ")
 
 
-def make_order(inventory):
+@multimethod
+def make_order(inventory: dict):
     """Make an order and check the inventory."""
     print("\n\nOrder ->")
     active = True
@@ -123,3 +126,55 @@ def make_order(inventory):
         }
     return order
 
+
+@multimethod
+def make_order(inventory: dict, protein: str, side: str, pickle: str, add_ons:
+        str):
+    """Duplicate function for testing."""
+    active = True
+
+    while active:
+        protein = protein.lower()
+        if protein in inventory['protein'].keys():
+            current_stock = inventory['protein'].get(protein)
+            inventory['protein'][protein] = current_stock - 1
+            break
+        else:
+            print("Invalid input.")
+
+    while active:
+        side = side.lower()
+        if side in inventory['side'].keys():
+            current_stock = inventory['side'].get(side)
+            inventory['side'][side] = current_stock - 1
+            break
+        else:
+            print("Invalid input.")
+
+    while active:
+        pickle = pickle.lower()
+        if pickle in inventory['pickle'].keys():
+            current_stock = inventory['pickle'].get(pickle)
+            inventory['pickle'][pickle] = current_stock - 1
+            break
+        else:
+            print("Invalid input.")
+
+    while active:
+        add_ons = add_ons.lower()
+        if add_ons in inventory['add_ons'].keys():
+            current_stock = inventory['add_ons'].get(add_ons)
+            inventory['add_ons'][add_ons] = current_stock - 1
+            break
+        elif add_ons == 'none':
+            break
+        else:
+            print("Invalid input.")
+
+    order = {
+        'protein': protein,
+        'side': side,
+        'pickle': pickle,
+        'add_ons': add_ons,
+        }
+    return order
