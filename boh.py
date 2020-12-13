@@ -1,8 +1,12 @@
-'''Back of House.'''
+'''
+Back of House.
+Install dependency, see example:
+    python3 -m pip install --user multimethod
+'''
 
 import json
-#python3 -m pip install --user multimethod
-from multimethod import multimethod #install from above command
+# have to install or comment out
+from multimethod import multimethod
 
 # inventory used for initial setup
 '''inventory = {
@@ -70,7 +74,7 @@ def display_menu(inventory):
         print(f"{add_ons.title():>8}", end=" ")
 
 
-@multimethod
+@multimethod # comment out if needed
 def make_order(inventory: dict):
     """Make an order and check the inventory."""
     print("\n\nOrder ->")
@@ -127,6 +131,7 @@ def make_order(inventory: dict):
     return order
 
 
+# comment out entire function if needed.
 @multimethod
 def make_order(inventory: dict, protein: str, side: str, pickle: str, add_ons:
         str):

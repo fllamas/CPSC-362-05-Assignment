@@ -18,14 +18,20 @@ class OrderTestCase(unittest.TestCase):
             # read inventory successfully
             pass
 
-        order = make_order(inventory, 'pork', 'rice', 'kimchi', 'egg')
+        orders = []
+        count = 0
+        while count <= 151:
+            order = make_order(inventory, 'pork', 'rice', 'kimchi', 'egg')
+            orders.append(order)
+            count += 1
+
         my_order =  {
                 'protein': 'pork',
                 'side': 'rice',
                 'pickle':'kimchi',
                 'add_ons': 'egg',
             }
-        self.assertEqual(order, my_order)
+        self.assertEqual(orders[0], my_order)
 
 if __name__=='__main__':
     unittest.main()

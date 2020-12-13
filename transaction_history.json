@@ -68,4 +68,9 @@
     "Chk": "#0014",
     "Total amount": "$10.00",
     "Order": "[{'protein': 'pork', 'side': 'rice', 'pickle': 'kimchi', 'add_ons': 'egg'}]"
+}{
+    "Table": "table_1",
+    "Chk": "#0015",
+    "Total amount": "$21.00",
+    "Order": "[{'protein': 'chicken', 'side': 'salad', 'pickle': 'kimchi', 'add_ons': 'none'}, {'protein': 'shrimp', 'side': 'rice', 'pickle': 'atchara', 'add_ons': 'egg'}]"
 }
