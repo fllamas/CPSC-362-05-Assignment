@@ -8,4 +8,54 @@
     "Chk": "#0002",
     "Total amount": "$9.00",
     "Order": "{'protein': 'chicken', 'side': 'salad', 'pickle': 'atchara', 'add_ons': 'none'}"
+}{
+    "Table": "table_1",
+    "Chk": "#0003",
+    "Total amount": "$10.00",
+    "Order": "{'protein': 'pork', 'side': 'rice', 'pickle': 'kimchi', 'add_ons': 'egg'}"
+}{
+    "Table": "table_2",
+    "Chk": "#0004",
+    "Total amount": "$12.00",
+    "Order": "{'protein': 'shrimp', 'side': 'salad', 'pickle': 'atchara', 'add_ons': 'egg'}"
+}{
+    "Table": "table_2",
+    "Chk": "#0005",
+    "Total amount": "$9.00",
+    "Order": "{'protein': 'chicken', 'side': 'rice', 'pickle': 'kimchi', 'add_ons': 'none'}"
+}{
+    "Table": "table_1",
+    "Chk": "#0006",
+    "Total amount": "$9.00",
+    "Order": "{'protein': 'chicken', 'side': 'atchara', 'pickle': 'nonw', 'add_ons': 'none'}"
+}{
+    "Table": "table_1",
+    "Chk": "#0007",
+    "Total amount": "$9.00",
+    "Order": "{'protein': 'chicken', 'side': 'salad', 'pickle': 'atchara', 'add_ons': 'none'}"
+}{
+    "Table": "table_1",
+    "Chk": "#0008",
+    "Total amount": "$21.00",
+    "Order": "[{'protein': 'pork', 'side': 'rice', 'pickle': 'kimchi', 'add_ons': 'none'}, {'protein': 'shrimp', 'side': 'salad', 'pickle': 'atchara', 'add_ons': 'egg'}]"
+}{
+    "Table": "table_2",
+    "Chk": "#0009",
+    "Total amount": "$19.00",
+    "Order": "[{'protein': 'pork', 'side': 'rice', 'pickle': 'kimchi', 'add_ons': 'egg'}, {'protein': 'chicken', 'side': 'salad', 'pickle': 'atchara', 'add_ons': 'none'}]"
+}{
+    "Table": "table_2",
+    "Chk": "#0010",
+    "Total amount": "$10.00",
+    "Order": "[{'protein': 'pork', 'side': 'rice', 'pickle': 'kimchi', 'add_ons': 'egg'}]"
+}{
+    "Table": "table_2",
+    "Chk": "#0011",
+    "Total amount": "$10.00",
+    "Order": "[{'protein': 'pork', 'side': 'rice', 'pickle': 'kimchi', 'add_ons': 'egg'}]"
+}{
+    "Table": "table_1",
+    "Chk": "#0012",
+    "Total amount": "$21.00",
+    "Order": "[{'protein': 'shrimp', 'side': 'rice', 'pickle': 'kimchi', 'add_ons': 'none'}, {'protein': 'pork', 'side': 'salad', 'pickle': 'atchara', 'add_ons': 'egg'}]"
 }

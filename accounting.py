@@ -52,9 +52,14 @@ def total_order(order):
 
 def process_payment(customer):
     """Process payment for customer order(s)."""
-    total = total_order(customer.order)
+    total = 0
+    for item in customer.order:
+        total += total_order(item)
+
     customer.check_num = get_check_num()
     print(f"Table: {customer.table_assigned}\tChk: #{customer.check_num:04d}")
+    for item in customer.order:
+        print(f"{item}")
     print(f"Your total amount is: {locale.currency(total, grouping=True)}")
     # add code later for payment options: cash, credit/debit card, mobile
 

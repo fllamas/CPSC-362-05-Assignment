@@ -4,16 +4,31 @@ import json
 
 # inventory used for initial setup
 '''inventory = {
+    'protein': {
         'pork': 150,
         'chicken': 250,
         'shrimp': 100,
-        'seasoning': 500,
+        },
+
+    'side': {
         'rice': 500,
         'salad': 200,
+        },
+
+    'pickle': {
         'kimchi': 400,
         'atchara': 400,
+        },
+
+    'add_ons': {
         'egg': 200,
-        }'''
+        },
+
+    'misc': {
+        'seasoning': 500,
+        },
+
+    }'''
 
 # Load the inventory. If the file is missing, uncomment to create file and dump
 # contents.
@@ -30,43 +45,75 @@ else:
     # read inventory successfully
     pass
 
+def display_menu(inventory):
+    """Display menu items from the current inventory."""
+    print(f"Step One, pick your protein:")
+    print('{:-^30}'.format(''))
+    for protein in inventory['protein'].keys():
+        print(f"{protein.title():>8}", end=" ")
+
+    print(f"\n\nStep Two, choose your side:")
+    print('{:-^30}'.format(''))
+    for side in inventory['side'].keys():
+        print(f"{side.title():>8}", end=" ")
+
+    print(f"\n\nStep Three, choose your pickle:")
+    print('{:-^30}'.format(''))
+    for pickle in inventory['pickle'].keys():
+        print(f"{pickle.title():>8}", end=" ")
+
+    print(f"\n\nStep Four, get an add-on (Optional):")
+    print('{:-^30}'.format(''))
+    for add_ons in inventory['add_ons'].keys():
+        print(f"{add_ons.title():>8}", end=" ")
+
+
 def make_order(inventory):
     """Make an order and check the inventory."""
-    protein = input("Step One: Pork, Chicken, Shrimp\n\tOption: ")
-    protein = protein.lower()
-    if protein in inventory.keys():
-        current_stock = inventory.get(protein)
-        inventory[protein] = current_stock - 1
-    else:
-        # add a flag to loop for valid input
-        pass
+    print("\n\nOrder ->")
+    active = True
 
-    side = input("Step Two: Rice, Salad\n\tOption: ")
-    side = side.lower()
-    if side in inventory.keys():
-        current_stock = inventory.get(side)
-        inventory[side] = current_stock - 1
-    else:
-        # add a flag to loop for valid input
-        pass
+    while active:
+        protein = input("Protein Option: ")
+        protein = protein.lower()
+        if protein in inventory['protein'].keys():
+            current_stock = inventory['protein'].get(protein)
+            inventory['protein'][protein] = current_stock - 1
+            break
+        else:
+            print("Invalid input.")
 
-    pickle = input("Step Three: Kimchi, Atchara\n\tOption: ")
-    pickle = pickle.lower()
-    if pickle in inventory.keys():
-        current_stock = inventory.get(pickle)
-        inventory[pickle] = current_stock - 1
-    else:
-        # add a flag to loop for valid input
-        pass
+    while active:
+        side = input("Side Option: ")
+        side = side.lower()
+        if side in inventory['side'].keys():
+            current_stock = inventory['side'].get(side)
+            inventory['side'][side] = current_stock - 1
+            break
+        else:
+            print("Invalid input.")
 
-    add_ons = input("Step Four: Egg, None\n\tOptions: ")
-    add_ons = add_ons.lower()
-    if add_ons in inventory.keys():
-        current_stock = inventory.get(add_ons)
-        inventory[add_ons] = current_stock - 1
-    else:
-        # add a flag to loop for valid input
-        pass
+    while active:
+        pickle = input("Pickle Option: ")
+        pickle = pickle.lower()
+        if pickle in inventory['pickle'].keys():
+            current_stock = inventory['pickle'].get(pickle)
+            inventory['pickle'][pickle] = current_stock - 1
+            break
+        else:
+            print("Invalid input.")
+
+    while active:
+        add_ons = input("Add-ons (or None): ")
+        add_ons = add_ons.lower()
+        if add_ons in inventory['add_ons'].keys():
+            current_stock = inventory['add_ons'].get(add_ons)
+            inventory['add_ons'][add_ons] = current_stock - 1
+            break
+        elif add_ons == 'none':
+            break
+        else:
+            print("Invalid input.")
 
     order = {
         'protein': protein,
