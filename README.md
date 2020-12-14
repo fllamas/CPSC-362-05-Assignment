@@ -8,8 +8,8 @@ python3 -m pip install --user multimethod
 <br>And to run test:<br>&nbsp;&nbsp;&nbsp;&nbsp;
 python3 test_make_order_function.py
 <br><br>
-What’s needed and/or doesn’t work
-    • multiple customers
-    • orders categorized by online, to-go, and dine-in
-    • for dine-in, have a queue for a waitlist if all tables are taken
-    • more error testing for if inventory runs out of certain items
+What’s needed and/or doesn’t work<br>
+    • multiple customers<br>
+    • orders categorized by online, to-go, and dine-in<br>
+    • for dine-in, have a queue for a waitlist if all tables are taken<br>
+    • more error testing for if inventory runs out of certain items<br>
