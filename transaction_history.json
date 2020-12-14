@@ -73,4 +73,39 @@
     "Chk": "#0015",
     "Total amount": "$21.00",
     "Order": "[{'protein': 'chicken', 'side': 'salad', 'pickle': 'kimchi', 'add_ons': 'none'}, {'protein': 'shrimp', 'side': 'rice', 'pickle': 'atchara', 'add_ons': 'egg'}]"
+}{
+    "Table": "table_1",
+    "Chk": "#0016",
+    "Total amount": "$21.00",
+    "Order": "[{'protein': 'pork', 'side': 'salad', 'pickle': 'atchara', 'add_ons': 'egg'}, {'protein': 'shrimp', 'side': 'rice', 'pickle': 'kimchi', 'add_ons': 'none'}]"
+}{
+    "Table": "table_2",
+    "Chk": "#0017",
+    "Total amount": "$10.00",
+    "Order": "[{'protein': 'pork', 'side': 'rice', 'pickle': 'kimchi', 'add_ons': 'egg'}]"
+}{
+    "Table": "table_1",
+    "Chk": "#0018",
+    "Total amount": "$11.00",
+    "Order": "[{'protein': 'shrimp', 'side': 'salad', 'pickle': 'kimchi', 'add_ons': 'none'}]"
+}{
+    "Table": "table_2",
+    "Chk": "#0019",
+    "Total amount": "$10.00",
+    "Order": "[{'protein': 'pork', 'side': 'rice', 'pickle': 'kimchi', 'add_ons': 'egg'}]"
+}{
+    "Table": "table_2",
+    "Chk": "#0020",
+    "Total amount": "$10.00",
+    "Order": "[{'protein': 'pork', 'side': 'rice', 'pickle': 'kimchi', 'add_ons': 'egg'}]"
+}{
+    "Table": "table_2",
+    "Chk": "#0021",
+    "Total amount": "$19.00",
+    "Order": "[{'protein': 'pork', 'side': 'rice', 'pickle': 'kimchi', 'add_ons': 'egg'}, {'protein': 'chicken', 'side': 'salad', 'pickle': 'atchara', 'add_ons': 'none'}]"
+}{
+    "Table": "table_1",
+    "Chk": "#0022",
+    "Total amount": "$19.00",
+    "Order": "[{'protein': 'pork', 'side': 'rice', 'pickle': 'kimchi', 'add_ons': 'none'}, {'protein': 'chicken', 'side': 'rice', 'pickle': 'atchara', 'add_ons': 'egg'}]"
 }

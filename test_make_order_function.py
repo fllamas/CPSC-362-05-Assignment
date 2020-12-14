@@ -31,7 +31,9 @@ class OrderTestCase(unittest.TestCase):
                 'pickle':'kimchi',
                 'add_ons': 'egg',
             }
-        self.assertEqual(orders[0], my_order)
+        # check if last order matches with my_order since it should be out of
+        # stock
+        self.assertEqual(orders[-1], my_order)
 
 if __name__=='__main__':
     unittest.main()
